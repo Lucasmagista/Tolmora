@@ -1,0 +1,185 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$ref": "#/definitions/TimePickerProps",
+  "definitions": {
+    "TimePickerProps": {
+      "type": "object",
+      "properties": {
+        "label": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "error": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "message": {
+                  "type": "string"
+                },
+                "stack": {
+                  "type": "string"
+                },
+                "messages": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "message",
+                "name"
+              ]
+            }
+          ]
+        },
+        "required": {
+          "type": "boolean"
+        },
+        "id": {
+          "type": "string"
+        },
+        "modelValue": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        },
+        "interval": {
+          "type": "number"
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "value": {
+                "type": "string"
+              },
+              "label": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "value"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "side": {
+          "type": "string",
+          "enum": [
+            "top",
+            "right",
+            "bottom",
+            "left"
+          ]
+        },
+        "align": {
+          "type": "string",
+          "enum": [
+            "start",
+            "center",
+            "end"
+          ]
+        },
+        "offset": {
+          "type": "number"
+        },
+        "placement": {
+          "type": "string",
+          "enum": [
+            "bottom-start",
+            "top-start",
+            "top-end",
+            "bottom-end",
+            "right-start",
+            "right-end",
+            "left-start",
+            "left-end"
+          ]
+        },
+        "placeholder": {
+          "type": "string"
+        },
+        "variant": {
+          "type": "string",
+          "enum": [
+            "outline",
+            "subtle"
+          ]
+        },
+        "size": {
+          "type": "string",
+          "enum": [
+            "sm",
+            "md",
+            "lg",
+            "xl"
+          ]
+        },
+        "typeable": {
+          "type": "boolean"
+        },
+        "readonly": {
+          "type": "boolean"
+        },
+        "allowCustom": {
+          "type": "boolean"
+        },
+        "keepOpen": {
+          "type": "boolean"
+        },
+        "autoClose": {
+          "type": "boolean"
+        },
+        "use12Hour": {
+          "type": "boolean"
+        },
+        "disabled": {
+          "type": "boolean"
+        },
+        "open": {
+          "type": "boolean"
+        },
+        "openOnFocus": {
+          "type": "boolean"
+        },
+        "openOnClick": {
+          "type": "boolean"
+        },
+        "min": {
+          "type": "string"
+        },
+        "max": {
+          "type": "string"
+        },
+        "minTime": {
+          "type": "string"
+        },
+        "maxTime": {
+          "type": "string"
+        },
+        "scrollMode": {
+          "type": "string",
+          "enum": [
+            "center",
+            "start",
+            "nearest"
+          ]
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

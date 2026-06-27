@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$ref": "#/definitions/DividerProps",
+  "definitions": {
+    "DividerProps": {
+      "type": "object",
+      "properties": {
+        "orientation": {
+          "type": "string",
+          "enum": [
+            "horizontal",
+            "vertical"
+          ]
+        },
+        "position": {
+          "type": "string",
+          "enum": [
+            "start",
+            "center",
+            "end"
+          ]
+        },
+        "flexItem": {
+          "type": "boolean"
+        },
+        "action": {
+          "type": "object",
+          "properties": {
+            "label": {
+              "type": "string"
+            },
+            "onClick": {
+              "type": "object"
+            },
+            "handler": {
+              "type": "object"
+            },
+            "loading": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "label"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}
